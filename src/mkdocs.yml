@@ -134,7 +134,7 @@ extra:
         json: [.s2]
     analytics:
         provider: google
-        property: G-TEQ9EN5RPN
+        property: !!env ANALYTICS_PROPERTY
         feedback:
             title: Was this page helpful?
             ratings:
