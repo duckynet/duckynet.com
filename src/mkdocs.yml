@@ -1,0 +1,198 @@
+nav:
+    - Home: index.md
+    - About Us: about.md
+    - Contact Us: contact.md
+    - Docs: docs.md
+
+    - Java:
+          - Java: java/index.md
+          - Getting Started With Java: java/getting_started.md
+          - Java Basics:
+                - Hello, World!: java/java_basics/hello_world_java.md
+
+    - Go:
+          - Go: go/index.md
+          - Quickstart guide: go/quick_start.md
+          - Basics:
+                - Types: go/basics/types.md
+                - Variables: go/basics/variables.md
+                - Functions: go/basics/functions.md
+                - Conditionals: go/basics/conditionals.md
+                - Loops: go/basics/loops.md
+                - Arrays: go/basics/arrays.md
+                - Slices: go/basics/slices.md
+                - Maps: go/basics/maps.md
+                - Structs: go/basics/structs.md
+                - Interfaces: go/basics/interfaces.md
+                - Pointers: go/basics/pointers.md
+                - Methods: go/basics/methods.md
+                - Concurrency: go/basics/concurrency.md
+                - Channels: go/basics/channels.md
+                - Errors: go/basics/errors.md
+                - Testing: go/basics/testing.md
+                - Benchmarking: go/basics/benchmarking.md
+                - Dependency Management: go/basics/dependency_management.md
+          - Advanced concepts:
+                - Overview: go/advanced/index.md
+                - gRPC: go/advanced/grpc/grpc.md
+
+# Project information
+site_name: duckynet
+site_url: https://duckynet.com
+site_author: duckynet
+site_description: >-
+    At duckynet, we blend technical expertise with the simplicity and friendliness. 
+    Explore a world of knowledge where learning is engaging and accessible.
+
+# Repository
+repo_name: GitHub
+repo_url: https://github.com/duckynet/duckynet.com
+edit_uri: tree/main/src/docs
+
+# Copyright
+copyright: >
+    Copyright &copy; 2023 duckynet –
+    <a href="#__consent">Change cookie settings</a> -
+    <a href="https://duckynet.com/privacy_policy">Privacy Policy</a> -
+    <a href="https://duckynet.com/terms_of_service">Terms of Service</a>
+
+# Configuration
+theme:
+    name: material
+    custom_dir: overrides
+    features:
+        - announce.dismiss
+        - content.action.view
+        - content.code.copy
+        - content.code.select
+        - content.tabs.link
+        - content.tooltips
+        - header.autohide
+        - navigation.footer
+        - navigation.indexes
+        - navigation.instant
+        - navigation.instant.prefetch
+        - navigation.instant.progress
+        - navigation.prune
+        - navigation.tabs
+        - navigation.tabs.sticky
+        - navigation.top
+        - navigation.tracking
+        - search.share
+        - toc.follow
+    icon:
+        repo: fontawesome/brands/github
+
+    palette:
+        # Palette toggle for automatic mode
+        - media: "(prefers-color-scheme)"
+          toggle:
+              icon: material/brightness-auto
+              name: Switch to system preference
+
+        # Palette toggle for light mode
+        - media: "(prefers-color-scheme: light)"
+          scheme: default
+          primary: amber
+          accent: indigo
+          toggle:
+              icon: material/weather-sunny
+              name: Switch to dark mode
+
+        # Palette toggle for dark mode
+        - media: "(prefers-color-scheme: dark)"
+          scheme: slate
+          primary: indigo
+          accent: amber
+          toggle:
+              icon: material/weather-night
+              name: Switch to light mode
+
+    font:
+        text: Inclusive Sans
+
+    favicon: assets/logo.png
+    logo: assets/logo.png
+
+    language: en
+
+# Plugins
+plugins:
+    # - blog
+    - search:
+          separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+    # - privacy:
+    #       concurrency: 1
+    # - group
+    # - info
+    # - social
+    # - tags
+
+# Additional configuration
+extra:
+    annotate:
+        json: [.s2]
+    analytics:
+        provider: google
+        property: !ENV MEASUREMENT_ID
+        feedback:
+            title: Was this page helpful?
+            ratings:
+                - icon: material/thumb-up-outline
+                  name: This page was helpful
+                  data: 1
+                  note: >-
+                      Thanks for your feedback!
+                - icon: material/thumb-down-outline
+                  name: This page could be improved
+                  data: 0
+                  note: >-
+                      Thanks for your feedback! Help us improve this page by
+                      using our <a href="https://forms.gle/m7GtAwa8Knan4o9dA" target="_blank" rel="noopener">feedback form</a>.
+    social:
+        - icon: fontawesome/brands/github
+          link: https://github.com/duckynet
+        - icon: fontawesome/brands/twitter
+          link: https://twitter.com/duckynet
+    homepage: https://duckynet.com
+    generator: false
+
+    consent:
+        title: Cookie consent
+        description: >-
+            We use cookies to recognize your repeated visits and preferences, 
+            as well as to measure the effectiveness of our documentation and 
+            whether users find what they're searching for. By giving your consent, 
+            you're helping us to make our documentation better. For more details, 
+            please review our
+            <a href="https://duckynet.com/privacy_policy">Privacy Policy</a>
+        cookies:
+            analytics:
+                name: Google Analytics
+                checked: true
+        actions:
+            - accept
+            - reject
+
+markdown_extensions:
+    - attr_list
+    - pymdownx.emoji:
+          emoji_index: !!python/name:material.extensions.emoji.twemoji
+          emoji_generator: !!python/name:material.extensions.emoji.to_svg
+    - md_in_html
+    - pymdownx.highlight:
+          anchor_linenums: true
+          line_spans: __span
+          pygments_lang_class: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - def_list
+    - pymdownx.tasklist:
+          custom_checkbox: true
+    - pymdownx.superfences
+    - pymdownx.tabbed:
+          alternate_style: true
+watch:
+    - docs
+    - overrides
+    - overrides/home.html

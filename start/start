@@ -1,0 +1,78 @@
+#!/bin/bash
+
+# Configurable variables
+ROOT_DIR="$(cd "$(dirname "$0")"/.. && pwd)"
+SRC_DIR="$ROOT_DIR/src"
+VENV_DIR="$ROOT_DIR/venv"
+REQUIREMENTS_PATH="$SRC_DIR/requirements.txt"
+
+# Function to find Python executable
+find_python() {
+    if command -v py >/dev/null 2>&1; then
+        echo "py"
+    elif command -v python >/dev/null 2>&1; then
+        echo "python"
+    elif command -v python3 >/dev/null 2>&1; then
+        echo "python3"
+    else
+        echo "Python is not installed. Please install Python."
+        exit 1
+    fi
+}
+
+# Function to create and activate virtual environment
+setup_venv() {
+    echo "Setting up virtual environment..."
+    if [ ! -d "$VENV_DIR" ]; then
+        echo "Creating virtual environment at $VENV_DIR..."
+        $PYTHON_CMD -m venv "$VENV_DIR"
+    else
+        echo "Virtual environment already exists at $VENV_DIR."
+    fi
+
+    echo "Activating virtual environment..."
+    # Adjust for compatibility with Git Bash on Windows
+
+    if [ $OSTYPE == "msys" ]; then
+        source "$VENV_DIR/Scripts/activate"
+    else
+        source "$VENV_DIR/bin/activate"
+    fi
+}
+
+# Function to install requirements
+install_requirements() {
+    echo "Preparing to install requirements..."
+    if [ ! -f "$REQUIREMENTS_PATH" ]; then
+        echo "Error: requirements.txt not found at $REQUIREMENTS_PATH."
+        exit 1
+    fi
+
+    echo "Installing requirements from $REQUIREMENTS_PATH..."
+    pip install -r "$REQUIREMENTS_PATH"
+}
+
+# Function to start MkDocs server
+start_mkdocs() {
+    echo "Preparing to start MkDocs server..."
+    if [ ! -f "$SRC_DIR/mkdocs.yml" ]; then
+        echo "Error: mkdocs.yml not found in $SRC_DIR. Are you in the right directory?"
+        exit 1
+    fi
+
+    echo "Starting MkDocs server from $SRC_DIR..."
+    mkdocs serve
+}
+
+# Main script execution
+main() {
+    echo "Starting main script execution..."
+    cd "$SRC_DIR" || { echo "Error: Failed to change directory to $SRC_DIR"; exit 1; }
+
+    PYTHON_CMD=$(find_python)
+    setup_venv
+    install_requirements
+    start_mkdocs
+}
+
+main

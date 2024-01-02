@@ -1,0 +1,60 @@
+{#-
+This file was automatically generated - do not edit
+-#}
+{% extends "main.html" %}
+{% block tabs %}
+{{ super() }}
+<style>
+        .mdx-container {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/images/hero.png');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 100vh;
+                /* Full viewport height */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+        }
+
+        .mdx-hero {
+                text-align: center;
+                max-width: 800px;
+                margin: auto;
+        }
+
+        .mdx-hero__content h1 {
+                font-size: 3em;
+                color: #eee;
+        }
+
+        .mdx-hero__content p {
+                font-size: 1em;
+                color: #ddd;
+        }
+
+        .md-typeset a.md-button:not(.md-button--primary) {
+                color: #eee;
+        }
+</style>
+
+<section class="mdx-container">
+        <div class=" md-typeset">
+                <div class="mdx-hero">
+                        <div class="mdx-hero__content">
+                                <h1>Courses as Documentation</h1>
+                                <p>{{ config.site_description }}.</p>
+                                <a href="{{ './docs/' | url }}" title="{{ page.next_page.title | e }}"
+                                        class="md-button md-button--primary">
+                                        Browse our Docs
+                                </a>
+                                <a href="{{ './go' | url }}" title="Go Programming: A Beginner's Guide"
+                                        class="md-button">
+                                        Learn Go
+                                </a>
+                        </div>
+
+                </div>
+        </div>
+</section>
+{% endblock %}
