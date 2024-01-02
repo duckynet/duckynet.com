@@ -40,7 +40,9 @@ nav:
 site_name: duckynet
 site_url: https://duckynet.com
 site_author: duckynet
-site_description: !ENV desc
+site_description: >-
+    At duckynet, we blend technical expertise with the simplicity and friendliness. 
+    Explore a world of knowledge where learning is engaging and accessible.
 
 # Repository
 repo_name: GitHub
