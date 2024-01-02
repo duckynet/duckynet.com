@@ -134,7 +134,7 @@ extra:
         json: [.s2]
     analytics:
         provider: google
-        property: !ENV MEASUREMENT_ID
+        property: G-TEQ9EN5RPN
         feedback:
             title: Was this page helpful?
             ratings:
