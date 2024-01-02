@@ -121,8 +121,8 @@ plugins:
     # - blog
     - search:
           separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
-    # - privacy:
-    #       concurrency: 1
+    - privacy:
+          concurrency: 1
     # - group
     # - info
     # - social
@@ -169,6 +169,9 @@ extra:
         cookies:
             analytics:
                 name: Google Analytics
+                checked: true
+            github:
+                name: GitHub
                 checked: true
         actions:
             - accept
