@@ -18,8 +18,8 @@ Our writers are passionate about sharing their knowledge and expertise with the 
 
 ### Follow us on Github
 
-- [duckynet](https://github.com/duckynet) - the mastermind behind the project
-- [Manolotonto1](https://github.com/ManoloTonto1) - a fellow contributor and writer
+- [Ardemium](https://github.com/ardemium) - **contributor and writer**
+- [Manolotonto1](https://github.com/ManoloTonto1) - **contributor and writer**
 
 ## Our Mission
 

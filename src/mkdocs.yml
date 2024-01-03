@@ -37,12 +37,11 @@ nav:
                 - gRPC: go/advanced/grpc/grpc.md
 
 # Project information
-site_name: duckynet
+site_name: "DuckyNet: Learning with Dacky"
 site_url: https://duckynet.com
-site_author: duckynet
+site_author: DuckyNet Team
 site_description: >-
-    At duckynet, we blend technical expertise with the simplicity and friendliness. 
-    Explore a world of knowledge where learning is engaging and accessible.
+    Discover learning at DuckyNet with Dacky! Access our extensive range of free online courses, programming tutorials, and developer resources.
 
 # Repository
 repo_name: GitHub
@@ -121,8 +120,8 @@ plugins:
     # - blog
     - search:
           separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
-    - privacy:
-          concurrency: 1
+    # - privacy:
+    #       concurrency: 1
     # - group
     # - info
     # - social

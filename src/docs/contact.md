@@ -17,7 +17,6 @@ Have a question or want to share your experiences with duckynet? We're all ears 
 ## Reach Out to Our Team
 
 - **Email**: Feel free to send us an email at [contact@duckynet.com](mailto:contact@duckynet.com).
-- **Social Media**: Stay connected with us on [Twitter](https://twitter.com/duckynet).
 - **GitHub**: Contribute to our community, report issues, or make suggestions on our [GitHub page](https://github.com/duckynet).
 
 ## duckynet Online
