@@ -1,12 +1,12 @@
 # Project information
-site_name: "DuckyNet: Learning with Dacky"
+site_name: "Learning with Dacky"
 site_url: https://duckynet.com
 site_author: DuckyNet Team
 site_description: >-
     Discover learning at DuckyNet with Dacky! Access our extensive range of free online courses, programming tutorials, and developer resources.
 
 # Repository
-repo_name: duckynet.com
+repo_name: GitHub
 repo_url: https://github.com/duckynet/duckynet.com
 edit_uri: tree/main/src/docs
 
