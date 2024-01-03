@@ -1,4 +1,5 @@
 ---
+status: new
 title: Go Programming - A Beginner's Guide
 template: index_course.html
 summary: The basics to write your first Go program.

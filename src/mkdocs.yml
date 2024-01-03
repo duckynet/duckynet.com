@@ -120,8 +120,8 @@ plugins:
     # - blog
     - search:
           separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
-    # - privacy:
-    #       concurrency: 1
+    - privacy:
+          concurrency: 1
     # - group
     # - info
     # - social
