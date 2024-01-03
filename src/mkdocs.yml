@@ -1,16 +1,29 @@
+# Project information
+site_name: "DuckyNet: Learning with Dacky"
+site_url: https://duckynet.com
+site_author: DuckyNet Team
+site_description: >-
+    Discover learning at DuckyNet with Dacky! Access our extensive range of free online courses, programming tutorials, and developer resources.
+
+# Repository
+repo_name: duckynet.com
+repo_url: https://github.com/duckynet/duckynet.com
+edit_uri: tree/main/src/docs
+
+# Navigation Structure
 nav:
     - Home: index.md
     - About Us: about.md
     - Contact Us: contact.md
     - Docs: docs.md
 
-    - Java:
+    - Java: # Java section
           - Java: java/index.md
           - Getting Started With Java: java/getting_started.md
           - Java Basics:
                 - Hello, World!: java/java_basics/hello_world_java.md
 
-    - Go:
+    - Go: # Go section
           - Go: go/index.md
           - Quickstart guide: go/quick_start.md
           - Basics:
@@ -36,29 +49,39 @@ nav:
                 - Overview: go/advanced/index.md
                 - gRPC: go/advanced/grpc/grpc.md
 
-# Project information
-site_name: "DuckyNet: Learning with Dacky"
-site_url: https://duckynet.com
-site_author: DuckyNet Team
-site_description: >-
-    Discover learning at DuckyNet with Dacky! Access our extensive range of free online courses, programming tutorials, and developer resources.
-
-# Repository
-repo_name: GitHub
-repo_url: https://github.com/duckynet/duckynet.com
-edit_uri: tree/main/src/docs
-
-# Copyright
-copyright: >
-    Copyright &copy; 2023 duckynet –
-    <a href="#__consent">Change cookie settings</a> -
-    <a href="https://duckynet.com/privacy_policy">Privacy Policy</a> -
-    <a href="https://duckynet.com/terms_of_service">Terms of Service</a>
-
-# Configuration
+# Theme Configuration
 theme:
     name: material
     custom_dir: overrides
+    language: en
+    palette:
+        # Palette toggle for automatic mode
+        - media: "(prefers-color-scheme)"
+          toggle:
+              icon: material/brightness-auto
+              name: Switch to system preference
+        # Palette toggle for light mode
+        - media: "(prefers-color-scheme: light)"
+          scheme: default
+          primary: amber
+          accent: indigo
+          toggle:
+              icon: material/weather-sunny
+              name: Switch to dark mode
+        # Palette toggle for dark mode
+        - media: "(prefers-color-scheme: dark)"
+          scheme: slate
+          primary: indigo
+          accent: amber
+          toggle:
+              icon: material/weather-night
+              name: Switch to light mode
+    font:
+        text: Inclusive Sans
+    favicon: assets/logo.png
+    logo: assets/logo.png
+    icon:
+        repo: fontawesome/brands/github
     features:
         - announce.dismiss
         - content.action.view
@@ -79,53 +102,25 @@ theme:
         - navigation.tracking
         - search.share
         - toc.follow
-    icon:
-        repo: fontawesome/brands/github
 
-    palette:
-        # Palette toggle for automatic mode
-        - media: "(prefers-color-scheme)"
-          toggle:
-              icon: material/brightness-auto
-              name: Switch to system preference
-
-        # Palette toggle for light mode
-        - media: "(prefers-color-scheme: light)"
-          scheme: default
-          primary: amber
-          accent: indigo
-          toggle:
-              icon: material/weather-sunny
-              name: Switch to dark mode
-
-        # Palette toggle for dark mode
-        - media: "(prefers-color-scheme: dark)"
-          scheme: slate
-          primary: indigo
-          accent: amber
-          toggle:
-              icon: material/weather-night
-              name: Switch to light mode
-
-    font:
-        text: Inclusive Sans
-
-    favicon: assets/logo.png
-    logo: assets/logo.png
-
-    language: en
-
-# Plugins
+# Plugins Configuration
 plugins:
-    # - blog
     - search:
           separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
     - privacy:
           concurrency: 1
+    # - blog
     # - group
     # - info
     # - social
     # - tags
+
+# Copyright
+copyright: >
+    Copyright &copy; 2023 duckynet –
+    <a href="#__consent">Change cookie settings</a> -
+    <a href="https://duckynet.com/privacy_policy">Privacy Policy</a> -
+    <a href="https://duckynet.com/terms_of_service">Terms of Service</a>
 
 # Additional configuration
 extra:

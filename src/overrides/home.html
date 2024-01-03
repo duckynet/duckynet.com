@@ -36,21 +36,33 @@ This file was automatically generated - do not edit
         .md-typeset a.md-button:not(.md-button--primary) {
                 color: #fff;
         }
+
+        .md-button>svg {
+                fill: white;
+                /* Example: Change the color to red */
+                width: 1em;
+                /* Example: Set a specific width */
+                height: 1em;
+                /* Example: Set a specific height */
+        }
 </style>
 
 <section class="mdx-container">
         <div class=" md-typeset">
                 <div class="mdx-hero">
                         <div class="mdx-hero__content">
-                                <h1>Welcome to DuckyNet<br>Your Hub for Learning and Developer Resources!</h1>
-                                <p>At DuckyNet, we're passionate about learning.<br>Join us and our mascot, <strong>Dacky the Rubber Ducky</strong>, in a journey through our innovative<br><strong>Documentation as Courses (DaC)</strong>.</p>
+                                <h1>Welcome to DuckyNet <br>Your Hub for Learning and Developer Resources!</h1>
+                                <p>At DuckyNet, we're passionate about learning.<br>Join us and our mascot,
+                                        <strong>Dacky the Rubber Ducky</strong>, in a journey through our
+                                        innovative<br><strong>Documentation as Courses (DaC)</strong>.
+                                </p>
                                 <a href="{{ './docs/' | url }}" title="{{ page.next_page.title | e }}"
                                         class="md-button md-button--primary">
                                         Browse our Docs
                                 </a>
                                 <a href="{{ './go' | url }}" title="Go Programming: A Beginner's Guide"
                                         class="md-button">
-                                        Learn Go
+                                        Learn Go {% include ".icons/material/new-box.svg" %}
                                 </a>
                         </div>
 
