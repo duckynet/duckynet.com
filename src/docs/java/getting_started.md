@@ -67,7 +67,7 @@ public class App {
 ```
 ### **Code Explanation**:
    - `public class App`: Defines a public class named `App`.
-   - `public static void main(String[] args)`: The program's entry point.
+   - `public static void main(String[] args) throws Exception`: The program's entry point.
    - `System.out.println("Hello, World!");`: Prints "Hello, World!" to the console.
 
 ## Running 'Hello World'
@@ -75,4 +75,39 @@ public class App {
 ### **Run the Program**:
    - Right-click in the `App.java` file.
    - Select `Run Java`.
-   - The output "Hello, World!" appears in VS Code's console.
+   - The output "Hello, World!" appears in VS Code's terminal.
+
+## Assignments
+   - [Read the guide on how to start, work and submit on an assignment](../assignments.md)
+   
+### Overview
+You are to modify the `App.java` file to achieve different levels of output complexity. Choose between easy, medium, and hard assignments as per your confidence level.
+
+---
+
+#### [Easy Assignment](https://classroom.github.com/a/ARMDLT_u)
+- **Objective:** Modify `App.java` to output "Hello, Java!".
+- **Hint:** Focus on changing the string within the `System.out.println` method.
+- **Expected Output:**
+  ```
+  Hello, Java!
+  ```
+
+#### [Medium Assignment](https://classroom.github.com/a/yE0NiqTy)
+- **Objective:** Alter `App.java` to print "Hello," on one line and "Java!!" on the next.
+- **Expected Output:**
+  ```
+  Hello,
+  Java!!
+  ```
+
+#### [Hard Assignment](https://classroom.github.com/a/fhgNdNSY)
+- **Objective:** Modify `App.java` to output "Hello," on the first line, "Java" on the second line, and "World!!" on the third line.
+- **Expected Output:**
+  ```
+  Hello,
+  Java
+  World!!
+  ```
+
+---

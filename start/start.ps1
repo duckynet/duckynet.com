@@ -4,6 +4,9 @@ $SRC_DIR = "$ROOT_DIR\src"
 $VENV_DIR = "$ROOT_DIR\venv"
 $REQUIREMENTS_PATH = "$SRC_DIR\requirements.txt"
 
+# Capture the original working directory
+$OriginalDir = Get-Location
+
 # Function to find Python executable
 function Find-Python {
     $pythonExes = @("py", "python", "python3")
@@ -16,7 +19,6 @@ function Find-Python {
     Write-Error "Python is not installed. Please install Python."
     exit 1
 }
-
 
 # Function to create and activate virtual environment
 function Setup-Venv {
@@ -65,6 +67,9 @@ function Main {
     Setup-Venv
     Install-Requirements
     Start-MkDocs
+
+    # Return to the original directory
+    Set-Location $OriginalDir
 }
 
 Main
